@@ -7,9 +7,9 @@
       "request": "launch",
 
       "servertype": "openocd",
-      "serverpath": "/opt/openocd/bin/openocd",
+      "serverpath": "openocd",
 
-      "gdbPath": "gdb-multiarch",
+      "gdbPath": "arm-none-eabi-gdb",
       "objdumpPath": "arm-none-eabi-objdump",
       "nmPath": "arm-none-eabi-nm",
 
@@ -27,8 +27,8 @@
       "preLaunchTask": "build",
       "runToEntryPoint": "main",
 
-      "device": "STM32F407VG",
-      "svdFile": "${workspaceFolder}/.vscode/STM32F407.svd",
+      "device": "STM32F411VG",
+      "svdFile": "${workspaceFolder}/.vscode/STM32F411.svd",
 
       "showDevDebugOutput": "raw"
     }

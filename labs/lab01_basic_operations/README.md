@@ -407,3 +407,64 @@ Therefore, the ARM Assembly program works correctly.
 What happens if `A - B` becomes negative in unsigned arithmetic?
 
 Write your answer in 1–2 sentences.
+
+
+## Student report
+
+Name: Балихін Анатолій
+GitHub username: ana-toly4
+Variant: 2
+
+### Task 1 — Manual Number Conversion
+**Decimal numbers:**
+14₁₀ = 1110₂ = 0E₁₆
+52₁₀ = 110100₂ = 34₁₆
+
+**Binary numbers:**
+1110₂ = 14₁₀ = 0E₁₆
+100100₂ = 36₁₀ = 24₁₆
+
+**Hexadecimal numbers:**
+0E₁₆ = 14₁₀ = 1110₂
+7C₁₆ = 124₁₀ = 1111100₂
+
+### Task 2 — Manual Addition and Subtraction
+A = 52
+B = 18
+
+A + B = 70
+A - B = 34
+
+**Decimal column form:**
+```text
+  52        52
++ 18      - 18
+----      ----
+  70        34
+
+**Binary column form:**
+  00110100       00110100
++ 00010010     - 00010010
+----------     ----------
+  01000110       00100010
+
+**Hexadecimal column form:**
+  34        34
++ 12      - 12
+----      ----
+  46        22
+
+### Task 3 & 4 — Registers and Screenshot
+Register   Meaning   Expected value   Debugger value
+R0         A         52               0x34
+R1         B         18               0x12
+R2         A + B     70               0x46
+R3         A - B     34               0x22
+
+![Debug Registers](screenshots/debug_registers.png)
+
+### Task 5 — Short Conclusion
+The values in registers R0 and R1 match the input numbers from my variant (52 and 18). The values in R2 and R3 match my manual addition (70) and subtraction (34) results. Therefore, the ARM Assembly program works correctly.
+
+### Optional Question Answer
+If `A - B` becomes negative in unsigned arithmetic, an integer underflow occurs. The result wraps around the maximum possible value (e.g., `0xFFFFFFFF` for a 32-bit register), producing a very large positive number instead of a negative one.
