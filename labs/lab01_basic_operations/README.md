@@ -461,7 +461,7 @@ R1         B         18               0x12
 R2         A + B     70               0x46
 R3         A - B     34               0x22
 
-![Debug Registers](screenshots/debug_registers.png)
+![Debug Registers](screenshots/debug_registers.png.png)
 
 ### Task 5 — Short Conclusion
 The values in registers R0 and R1 match the input numbers from my variant (52 and 18). The values in R2 and R3 match my manual addition (70) and subtraction (34) results. Therefore, the ARM Assembly program works correctly.
